@@ -53,9 +53,9 @@ int TirerNombreMystere()
 
 void JouerPartie(TJoueur& un_joueur, int nombreADeviner)
 {
-    //A COMPLETER
 
-    un_joueur.nbPartiesJouees = un_joueur.nbPartiesJouees + 1;
+    un_joueur.nbPartiesJouees = un_joueur.nbPartiesJouees++;
+    //A COMPLETER
 }
 
 
@@ -67,7 +67,12 @@ void JouerPartie(TJoueur& un_joueur, int nombreADeviner)
 
 void MajResultatsJoueur(TJoueur joueur, int nbEssais, bool gagne)
 {
-   // A COMPLETER
+    joueur.nbPartiesJouees++;
+    joueur.nbTentatives = joueur.nbTentatives + nbEssais;
+    if(gagne == true)
+    {
+        joueur.nbPartiesGagnees++;
+    }
 }
 
 // Nom : ResultatsJoueur
@@ -80,7 +85,10 @@ void MajResultatsJoueur(TJoueur joueur, int nbEssais, bool gagne)
 
 void ResultatsJoueur(TJoueur joueur, int& nbsucces, int& nbechec, int& nbessais)
 {
-    // A COMPLETER
+    int echec;
+    joueur.nbTentatives;
+    joueur.nbPartiesJouees;
+    echec = joueur.nbTentatives - joueur.nbPartiesGagnees;
 }
 
 // Nom :Nom
