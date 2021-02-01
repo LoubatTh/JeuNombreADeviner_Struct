@@ -40,7 +40,7 @@ int TirerNombreMystere()
 {
     srand(time(0));
     int random = rand() %10+1;
-        return random;
+    return random;
 }
 
 
@@ -53,8 +53,33 @@ int TirerNombreMystere()
 
 void JouerPartie(TJoueur& un_joueur, int nombreADeviner)
 {
-
-    un_joueur.nbPartiesJouees = un_joueur.nbPartiesJouees++;
+    int rep=0;
+    int i=0;
+    cout << "Veuillez saisir un nombre entre 1 et 10";
+    cin >> rep;
+    while(rep != nombreADeviner,i++, i<=4)
+    {
+        if (rep > nombreADeviner)
+        {
+            cout << "Plus petit";
+            cin >> rep;
+        }
+        else if (rep < nombreADeviner)
+        {
+            cout << "Plus grand";
+            cin >> rep;
+        }
+    }
+    if (rep != nombreADeviner, i==4)
+    {
+        cout << "Perdu, la reponse etait " << rep << " ! ";
+        MajResultatsJoueur(un_joueur,i,false);
+    }
+    else
+    {
+        cout << "Bravo, la reponse etait " << rep << " ! ";
+        MajResultatsJoueur(un_joueur,i,true);
+    }
     //A COMPLETER
 }
 
