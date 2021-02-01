@@ -21,3 +21,14 @@
 	<iostream>
 	"../include/JeuNombreADeviner.h"
 
+1611580507 source:z:\pinaud\c++\jeu du nombre a deviner\jeunombreadeviner_struct\src\jeunombreadeviner.cpp
+	<iostream>
+	"../include/JeuNombreAdeviner.h"
+
+1611583938 z:\pinaud\c++\jeu du nombre a deviner\jeunombreadeviner_struct\include\jeunombreadeviner.h
+	<string>
+
+1611580507 source:z:\pinaud\c++\jeu du nombre a deviner\jeunombreadeviner_struct\src\mainjeunombreadeviner.cpp
+	<iostream>
+	"../include/JeuNombreADeviner.h"
+
