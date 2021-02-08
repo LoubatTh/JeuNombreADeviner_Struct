@@ -16,8 +16,19 @@ using namespace std;
 
 int main()
 {
-    cout << "Vous allez jouer pour deviner un nombre secret" << endl;
+    string nom;
+    TJoueur joueur1;
 
+    cout << "Vous allez jouer pour deviner un nombre secret, veuillez saisir votre nom." << endl;
+    cin >> nom;
+    InitJoueur(joueur1,nom);
+
+        JouerPartie(joueur1,TirerNombreMystere());
+    cout << "Voici vos statistiques" << endl;
+    cout << "Nom:" << joueur1.nom << endl;
+    cout << "Parties jouees:" << joueur1.nbPartiesJouees << endl;
+    cout << "Parties gagnees:" << joueur1.nbPartiesGagnees << endl;
+    cout << "Nombre de tentatives:" << joueur1.nbTentatives << endl;
     return 0;
 }
 

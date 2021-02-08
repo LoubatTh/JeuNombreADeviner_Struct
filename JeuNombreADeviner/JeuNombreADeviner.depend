@@ -32,3 +32,16 @@
 	<iostream>
 	"../include/JeuNombreADeviner.h"
 
+1612739620 source:c:\users\trinel\onedrive\bureau\pinaud\c++\jeu nombre a deviner\jeunombreadeviner_struct\src\jeunombreadeviner.cpp
+	<iostream>
+	<ctime>
+	<cstdlib>
+	"../include/JeuNombreAdeviner.h"
+
+1612720956 c:\users\trinel\onedrive\bureau\pinaud\c++\jeu nombre a deviner\jeunombreadeviner_struct\include\jeunombreadeviner.h
+	<string>
+
+1612739591 source:c:\users\trinel\onedrive\bureau\pinaud\c++\jeu nombre a deviner\jeunombreadeviner_struct\src\mainjeunombreadeviner.cpp
+	<iostream>
+	"../include/JeuNombreADeviner.h"
+

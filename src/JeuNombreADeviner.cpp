@@ -19,7 +19,7 @@ using namespace std;
 // Nom :InitJoueur
 // Rôle : Crée un joueur. Initialise toutes les informations du joueur.
 //        Le nombre de tentatives, de parties gagnées et de parties jouées seront à 0.
-// Paramètres d'entrée :
+// Paramètres d'entrée : joueurAcreer, un_nom
 // Paramètres de sortie :
 // Paramètres d'entrée/sortie :
 
@@ -55,32 +55,32 @@ void JouerPartie(TJoueur& un_joueur, int nombreADeviner)
 {
     int rep=0;
     int i=0;
-    cout << "Veuillez saisir un nombre entre 1 et 10";
+    cout << "Veuillez saisir un nombre entre 1 et 10" << endl;
     cin >> rep;
-    while(rep != nombreADeviner,i++, i<=4)
+    while(rep != nombreADeviner,i++, i<=3)
     {
         if (rep > nombreADeviner)
         {
-            cout << "Plus petit";
+            cout << "Plus petit" << endl;
             cin >> rep;
         }
         else if (rep < nombreADeviner)
         {
-            cout << "Plus grand";
+            cout << "Plus grand" << endl;
             cin >> rep;
         }
     }
-    if (rep != nombreADeviner, i==4)
-    {
-        cout << "Perdu, la reponse etait " << rep << " ! ";
-        MajResultatsJoueur(un_joueur,i,false);
-    }
-    else
-    {
-        cout << "Bravo, la reponse etait " << rep << " ! ";
-        MajResultatsJoueur(un_joueur,i,true);
-    }
-    //A COMPLETER
+        if (rep == nombreADeviner)
+
+        {
+            cout << "Bravo, la reponse etait " << nombreADeviner << " ! " << endl;
+            MajResultatsJoueur(un_joueur,i,true);
+        }
+        else
+        {
+            cout << "Perdu, la reponse etait " << nombreADeviner << " ! " << endl;
+            MajResultatsJoueur(un_joueur,i,false);
+        }
 }
 
 
