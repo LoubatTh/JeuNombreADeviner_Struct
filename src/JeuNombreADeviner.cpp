@@ -61,12 +61,12 @@ void JouerPartie(TJoueur& un_joueur, int nombreADeviner)
     {
         if (rep > nombreADeviner)
         {
-            cout << "Plus petit" << endl;
+            cout << "Veuillez saisir un nombre plus petit que " << rep << endl;
             cin >> rep;
         }
         else if (rep < nombreADeviner)
         {
-            cout << "Plus grand" << endl;
+            cout << "Veuillez saisir un nombre plus grand que " << rep << endl;
             cin >> rep;
         }
     }
@@ -88,9 +88,9 @@ void JouerPartie(TJoueur& un_joueur, int nombreADeviner)
 // Rôle : met à jour les informations du joueur passé en paramètre
 // Paramètres d'entrée:
 // Paramètres de sortie:
-// Paramètres d'entrée/sortie :
+// Paramètres d'entrée/sortie : TJoueur joueur
 
-void MajResultatsJoueur(TJoueur joueur, int nbEssais, bool gagne)
+void MajResultatsJoueur(TJoueur& joueur, int nbEssais, bool gagne)
 {
     joueur.nbPartiesJouees++;
     joueur.nbTentatives = joueur.nbTentatives + nbEssais;
@@ -110,10 +110,9 @@ void MajResultatsJoueur(TJoueur joueur, int nbEssais, bool gagne)
 
 void ResultatsJoueur(TJoueur joueur, int& nbsucces, int& nbechec, int& nbessais)
 {
-    int echec;
-    joueur.nbTentatives;
-    joueur.nbPartiesJouees;
-    echec = joueur.nbTentatives - joueur.nbPartiesGagnees;
+    nbessais = joueur.nbTentatives;
+    nbsucces = joueur.nbPartiesGagnees;
+    nbechec = joueur.nbPartiesJouees - joueur.nbPartiesGagnees;
 }
 
 // Nom :Nom

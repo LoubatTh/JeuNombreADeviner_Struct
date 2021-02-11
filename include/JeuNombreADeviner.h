@@ -57,7 +57,7 @@ void JouerPartie (TJoueur &un_joueur, int nombreADeviner);
 // Paramètres de sortie: gagne
 // Paramètres d'entrée/sortie : joueur
 
-void MajResultatsJoueur(TJoueur joueur, int nbEssais, bool gagne);
+void MajResultatsJoueur(TJoueur& joueur, int nbEssais, bool gagne);
 
 
 
